@@ -6,9 +6,11 @@ export default function FriendListItem({
 }) {
   return (
     <div>
-      <img src={avatar} alt={name} width="48" />
-      <p>{name}</p>
-      <p>{isOnline}</p>
+      <img src={avatar} alt={name} width="48" className={css.imageOfAnimal} />
+      <p className={css.nameOfAnimal}>{name}</p>
+      <p className={clsx(isOnline ? css.isOnline : css.isOffline)}>
+        {isOnline ? 'Online' : 'Offline'}
+      </p>
     </div>
   );
 }
