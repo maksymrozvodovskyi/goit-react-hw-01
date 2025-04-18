@@ -1,14 +1,15 @@
 import css from './Profile.module.css';
+import clsx from 'clsx';
 
-export default function Profile(
+export default function Profile({
   name,
   tag,
   location,
   image,
-  { stats: { followers, views, likes } },
-) {
+  stats: { followers, views, likes },
+}) {
   return (
-    <div>
+    <div className={clsx(css.line)}>
       <div>
         <img src={image} alt={name} />
         <p>{name}</p>
