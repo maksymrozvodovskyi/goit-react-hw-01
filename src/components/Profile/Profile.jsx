@@ -9,26 +9,26 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div className={clsx(css.line)}>
-      <div>
-        <img src={image} alt={name} />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={clsx(css.line, css.container)}>
+      <div className={css.information}>
+        <img src={image} alt={name} width={150} className={css.background} />
+        <p className={css.font}>{name}</p>
+        <p className={css.colorText}>@{tag}</p>
+        <p className={css.colorText}>{location}</p>
       </div>
 
-      <ul>
-        <li>
+      <ul className={css.list}>
+        <li className={css.item}>
           <span>Followers</span>
-          <span>{followers}</span>
+          <span className={css.font}>{followers}</span>
         </li>
-        <li>
+        <li className={css.item}>
           <span>Views</span>
-          <span>{views}</span>
+          <span className={css.font}>{views}</span>
         </li>
-        <li>
+        <li className={css.item}>
           <span>Likes</span>
-          <span>{likes}</span>
+          <span className={css.font}>{likes}</span>
         </li>
       </ul>
     </div>
