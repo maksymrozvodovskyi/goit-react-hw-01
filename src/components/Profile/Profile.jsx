@@ -1,4 +1,4 @@
-import css from './Profile.modules.css';
+import css from './Profile.module.css';
 
 export default function Profile(
   name,
