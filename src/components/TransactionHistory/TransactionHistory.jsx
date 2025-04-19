@@ -16,7 +16,9 @@ export default function TransactionHistory({ items }) {
         <tbody>
           {items.map(({ id, type, amount, currency }) => (
             <tr key={id} className={css.trStyle}>
-              <td className={css.thtdStyle}>{type}</td>
+              <td className={css.thtdStyle}>
+                {type.charAt(0).toUpperCase() + type.slice(1)}
+              </td>
               <td className={css.thtdStyle}>{amount}</td>
               <td className={css.thtdStyle}>{currency}</td>
             </tr>
